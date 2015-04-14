@@ -1,1 +1,1 @@
-##This directory contains several picture which are the app running shotcut.
+This directory contains several picture which are the app running shotcut.

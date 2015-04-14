@@ -6,5 +6,5 @@ This is a pedometer demo. It was accomplished at Dec.25,2014.
 ###App UI:
 ![App not start](/image/not_start.png)
 
-![App start][/img/start.png]
+![App start](/img/start.png)
 

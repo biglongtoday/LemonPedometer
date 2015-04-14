@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="large_half">240px</dimen>
+    <dimen name="value">45sp</dimen>
+    <dimen name="small_value">30sp</dimen>
+    <dimen name="step_count">30sp</dimen>
+    <dimen name="units">11sp</dimen>
+    <dimen name="desired_pace">36sp</dimen>
+    <dimen name="desired_pace_width">128sp</dimen>
+    <dimen name="button">48sp</dimen>
+    <dimen name="button_sign">24sp</dimen>
+    <dimen name="margin">10px</dimen>
+    <dimen name="padding">5px</dimen>
+    <dimen name="row_spacing">10px</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fbutton_default_conner_radius">8dp</dimen>
+    <dimen name="fbutton_default_padding_left">10dp</dimen>
+    <dimen name="fbutton_default_padding_right">10dp</dimen>
+    <dimen name="fbutton_default_padding_top">5dp</dimen>
+    <dimen name="fbutton_default_padding_bottom">5dp</dimen>
+    <dimen name="fbutton_default_shadow_height">4dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

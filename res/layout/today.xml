@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:id="@+id/layout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center" >
+
+         <!-- 用进度条显示用户行走了的步数 -->
+
+         <com.example.lemon.pedometer.ui.HoloCircularProgressBar
+             android:id="@+id/display_paces"
+             android:layout_width="200dp"
+             android:layout_height="200dp"
+             app:marker_progress="0.3"
+             app:progress="0.4" />
+         
+          <!-- 在progressbar中间显示步数 -->
+
+	     <TextView
+	         android:id="@+id/step_value"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_centerHorizontal="true"
+	         android:layout_centerVertical="true"
+	         android:textSize="17pt"
+	         android:text="paces" />
+
+     </RelativeLayout>
+
+     <ImageView
+         android:id="@+id/shareView"
+         android:layout_width="70sp"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="250dp"
+         android:src="@drawable/share" />
+     
+     <!-- 图表和下面的分割线 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line_h2" />
+    
+     
+   <LinearLayout android:id="@+id/row_1"
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        android:layout_height="50dp"
+        android:background="@color/display_background" >
+
+        <LinearLayout android:id="@+id/box_distance"
+            android:orientation="vertical"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+            <!-- 行走的距离 -->
+            <TextView android:id="@+id/distance_value"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" 
+                android:text=""/>
+            <TextView android:id="@+id/distance_units"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/kilometers"
+                android:layout_marginTop="10dp"
+              	android:layout_marginBottom="0dp"
+                android:textSize="@dimen/units"  />
+
+        </LinearLayout>
+        
+        <!-- 左右分割线 -->
+         <LinearLayout
+		        android:layout_width="1px"
+		        android:layout_height="fill_parent"
+		        android:background="@drawable/line_w1" />
+         
+         
+        <LinearLayout android:id="@+id/box_steps"
+            android:orientation="vertical"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+			<!-- 行走的速度m/s -->
+            <TextView android:id="@+id/pace_value"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"  
+                android:gravity="center_horizontal"    
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/pace_units"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/steps_per_minute"
+                android:layout_marginTop="10dp"
+               android:layout_marginBottom="0dp"
+                android:textSize="@dimen/units"  />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+   <!-- 两行之间的分割线 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line_h2" />
+    
+    <LinearLayout android:id="@+id/row_2"
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        android:layout_height="50dp"
+        android:background="@color/display_background" >
+    
+        <LinearLayout android:id="@+id/box_pace"
+            android:orientation="vertical" 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1">
+        	<!--  -->
+            <TextView android:id="@+id/speed_value"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+              
+                android:text=""/>
+            <TextView android:id="@+id/speed_units"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/units"
+                android:layout_marginTop="10dp"
+               android:layout_marginBottom="0dp"
+                android:text="@string/kilometers_per_hour" />
+                         
+        </LinearLayout>
+        
+         <!-- 左右分割线 -->
+        <LinearLayout
+		        android:layout_width="1px"
+		        android:layout_height="fill_parent"
+		        android:background="@drawable/line_w1" />
+        
+        <LinearLayout android:id="@+id/box_calories"
+            android:orientation="vertical" 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1">
+        
+            <TextView android:id="@+id/calories_value"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+          
+                android:text=""/>
+            <TextView android:id="@+id/calories_units"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/units" 
+                android:layout_marginTop="10dp"
+               android:layout_marginBottom="0dp"
+                android:text="@string/calories_burned" />
+                         
+        </LinearLayout>
+
+    </LinearLayout>
+  
+    <!-- 分割线 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line_h2" />
+    
+    <!--下面首先添加一个开始按钮，然后单击开始之后变成两个按钮，暂停和终止  -->
+	<LinearLayout
+	    android:id="@+id/buttonlayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp"
+	    android:orientation="horizontal" >
+        
+	    <com.example.lemon.pedometer.ui.FButton
+	        android:id="@+id/start"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:text="开始"
+	        android:layout_gravity="center"
+	     
+	        android:textColor="@android:color/white"
+	        fbutton:buttonColor="@color/fbutton_color_emerald"
+	        fbutton:shadowEnabled="false"/>
+	    
+	     <RelativeLayout 
+	    	android:layout_width="match_parent"
+	   	 	android:layout_height="match_parent" >
+	
+		      <com.example.lemon.pedometer.ui.FButton
+		          android:id="@+id/pause"
+		          android:layout_width="159dp"
+		          android:layout_height="wrap_content"
+		          android:layout_alignParentLeft="true"
+		          android:text="暂停"
+		          android:textColor="@android:color/white"
+		          android:onClick="pauseClick"
+		          fbutton:buttonColor="@color/fbutton_color_emerald"
+		          fbutton:shadowEnabled="false"
+		          android:visibility="gone" />
+		
+
+		      <com.example.lemon.pedometer.ui.FButton
+		          android:id="@+id/stop"
+		          android:layout_width="159dp"
+		          android:layout_height="wrap_content"
+		          android:layout_alignParentRight="true"
+		          android:text="终止"
+		          android:textColor="@android:color/white"
+		          android:onClick="stopClick"
+		          fbutton:buttonColor="@color/fbutton_color_emerald"
+		          fbutton:shadowEnabled="false"
+		          android:visibility="gone" />
+
+	</RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

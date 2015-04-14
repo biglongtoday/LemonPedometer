@@ -14,3 +14,6 @@ This is a pedometer demo. It was accomplished at Dec.25,2014.
 
 ![history](/image/history.png)
 
+###Statement:
+This Pedometer's algorithm is fork from bagilevi. You can look at it by [click me](https://github.com/bagilevi/android-pedometer).
+
